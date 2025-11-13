@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.integrate import solve_ivp
-from modeling import StateSpaceModel # Assuming rlc_models is in the same package
+from modeling import StateSpaceModel 
 
 class InputSignal:
     def __init__(self, signal_type: str, amplitude: float = 1.0, frequency: float = 1.0, phase: float = 0.0):
@@ -79,4 +79,5 @@ class RLCSolver:
         vC_t = self.solution.y[0, :] 
         iL_t = self.solution.y[1, :] 
         
+
         return time, vC_t, iL_t
